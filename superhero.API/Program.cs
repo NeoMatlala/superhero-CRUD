@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using superhero.Application.SuperheroService;
 using superhero.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<ISuperheroService, SuperheroService>();
 
 builder.Services.AddCors(options => options.AddPolicy(
     name: "AllowLocalhost",
