@@ -1,3 +1,15 @@
-<div class="container">
-  <mat-slide-toggle>Toggle me!</mat-slide-toggle>
-</div>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <h1>
+      <a class="button" routerLink="/">Hero_CRUD</a>
+    </h1>
+    <ul>
+      <li>
+        <a class="button" routerLink="/heroes">Heroes</a>
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
