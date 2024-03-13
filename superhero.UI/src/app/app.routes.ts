@@ -7,8 +7,8 @@ import { AddHeroComponent } from './components/add-hero/add-hero.component';
 
 export const routes: Routes = [
     {path: '', component: HomePageComponent},
-    {path: 'hero-delete', component: HeroDeleteComponent},
+    {path: 'hero-delete/:id', component: HeroDeleteComponent},
     {path: 'heroes', component: TableComponent},
-    {path: 'hero-edit', component: HeroEditComponent},
+    {path: 'hero-edit/:id', component: HeroEditComponent},
     {path: 'create-hero', component: AddHeroComponent},
 ];

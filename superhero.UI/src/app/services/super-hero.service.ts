@@ -11,10 +11,6 @@ export class SuperHeroService {
   constructor(private http: HttpClient) { }
 
   private url = 'https://localhost:7175/api/Superhero/get-all-heroes'
-  
-  superHeroArray: SuperHero[] = [
-    {name: 'Pinky Pinky', firstName: 'Zweli', lastName: 'Khumalo', place: 'Soweto'},
-  ];
 
   public getSuperHeroes(): Observable<SuperHero[]> {
     return this.http.get<SuperHero[]>(this.url)
