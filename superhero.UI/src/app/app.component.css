@@ -1,0 +1,27 @@
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+mat-sidenav{
+    width: 20%;
+    padding: 1.5rem;
+}
+
+mat-sidenav-content{
+    padding: 1.5rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
