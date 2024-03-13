@@ -3,10 +3,12 @@ import { HeroDeleteComponent } from './components/hero-delete/hero-delete.compon
 import { HeroEditComponent } from './components/hero-edit/hero-edit.component';
 import { TableComponent } from './components/table/table.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AddHeroComponent } from './components/add-hero/add-hero.component';
 
 export const routes: Routes = [
     {path: '', component: HomePageComponent},
     {path: 'hero-delete', component: HeroDeleteComponent},
     {path: 'heroes', component: TableComponent},
     {path: 'hero-edit', component: HeroEditComponent},
+    {path: 'create-hero', component: AddHeroComponent},
 ];
