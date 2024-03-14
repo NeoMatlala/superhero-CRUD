@@ -14,13 +14,15 @@ export class SuperHeroService {
     return this.http.get<SuperHero[]>("https://localhost:7175/api/Superhero/get-all-heroes")
   }
 
-  // get single superhero
   public getSingleSuperhero(heroId: number): Observable<SuperHero>{
     return this.http.get<SuperHero>(`https://localhost:7175/api/Superhero/get-hero/${heroId}`)
   }
 
-  // TODO: Create supehero
   public createHero(hero: SuperHero): Observable<SuperHero> {
     return this.http.post<SuperHero>("https://localhost:7175/api/Superhero/create-hero", hero)
+  }
+
+  public deleteHero(heroId: number): Observable<SuperHero> {
+    return this.http.delete<SuperHero>(`https://localhost:7175/api/Superhero/delete-hero/${heroId}`)
   }
 }

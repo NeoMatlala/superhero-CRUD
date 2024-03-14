@@ -1,6 +1,6 @@
-import { Component, NgModule  } from '@angular/core';
+import { Component  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { SuperHero } from '../../models/super-hero';
 import { SuperHeroService } from '../../services/super-hero.service';
 
@@ -25,7 +25,6 @@ export class AddHeroComponent {
 
   submitForm() {
     this._superHeroService.createHero(this.hero).subscribe((response: any) => {
-      console.log(response.success)
 
       if(response.success) {
         this.router.navigate(["/heroes"])
