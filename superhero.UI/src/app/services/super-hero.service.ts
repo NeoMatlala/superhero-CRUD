@@ -25,4 +25,8 @@ export class SuperHeroService {
   public deleteHero(heroId: number): Observable<SuperHero> {
     return this.http.delete<SuperHero>(`https://localhost:7175/api/Superhero/delete-hero/${heroId}`)
   }
+
+  public updateHero(heroId: number, hero: SuperHero) : Observable<SuperHero> {
+    return this.http.put<SuperHero>(`https://localhost:7175/api/Superhero/update-hero/${heroId}`, hero)
+  }
 }
