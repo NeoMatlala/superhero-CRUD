@@ -1,25 +1,25 @@
 <div class="text-black max-w-6xl">
     <h1 class="">Create Hero</h1>
 
-    <form class="mt-10">
+    <form class="mt-10" (ngSubmit)="submitForm()">
         <div class="grid grid-cols-2 gap-5 mb-5">
             <div>
                 <label for="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hero Name</label>
-                <input type="text" id="Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Pinky Pinky" required />
+                <input type="text" id="Name" name="heroName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Pinky Pinky" [(ngModel)]="hero.name" required />
             </div>
             <div>
-                <label for="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Place</label>
-                <input type="text" id="Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Soweto" required />
+                <label for="place" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Place</label>
+                <input type="text" id="place" name="place" [(ngModel)]="hero.place" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Soweto" required />
             </div>
         </div>
         <div class="grid grid-cols-2 gap-5">
             <div>
-                <label for="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-                <input type="text" id="Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Thabo Pinky" required />
+                <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+                <input type="text" id="firstName" name="firstName" [(ngModel)]="hero.firstName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Thabo Pinky" required />
             </div>
             <div>
-                <label for="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Surname</label>
-                <input type="text" id="Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="M'lungu" required />
+                <label for="lastNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Surname</label>
+                <input type="text" id="lastNumber" name="lastNumber" [(ngModel)]="hero.lastName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="M'lungu" required />
             </div>
         </div>
         <div class="flex justify-end items-center gap-2 mt-5">
