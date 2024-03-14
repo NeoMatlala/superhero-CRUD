@@ -1,7 +1,7 @@
 <div class="text-black max-w-6xl">
     <h1>Delete Hero</h1>
 
-    <form class="mt-10">
+    <div class="mt-10">
         <div class="grid grid-cols-2 gap-5 mb-5">
             <div>
                 <label for="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hero Name</label>
@@ -23,8 +23,8 @@
             </div>
         </div>
         <div class="flex justify-end items-center gap-2 mt-5">
-            <button type="submit" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Delete</button>
+            <button (click)="onDelete()" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Delete</button>
             <a routerLink="/heroes" class="text-slate-400 bg-slate-100 border border-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cancel</a>
         </div>
-    </form>
+    </div>
 </div>
