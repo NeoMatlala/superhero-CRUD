@@ -18,7 +18,6 @@ export class HeroEditComponent {
   heroId: number = 0
 
   hero: SuperHero = {
-    heroId: 0,
     name: '',
     firstName: '',
     lastName: '',
